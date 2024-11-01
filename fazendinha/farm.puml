@@ -1,0 +1,30 @@
+@startuml
+title Fazendinha
+
+abstract class Animal {
+    - name : String
+    + Animal(name : String)
+    + Animal()
+    + {abstract} talk()
+    + {abstract} eat()
+    + getName() : String
+}
+
+class Cat extends Animal {
+    + Cat(name : String)
+    + talk()
+    + eat() 
+}
+
+class Cow extends Animal {
+    + Cow(name : String)
+    + talk()
+    + eat()
+}
+
+class Dog extends Animal {
+    + Dog(name : String)
+    + talk()
+    + eat()
+}
+@enduml
