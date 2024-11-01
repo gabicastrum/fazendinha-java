@@ -1,35 +1,20 @@
 public class Main {
   public static void main(String[] args) {
-    Animal olivia = new Cat("Olivia");
+    Cat olivia = new Cat("Olivia");
     Cat buba = new Cat("Buba");
     Dog jujubinha = new Dog("Jujubinha");
-    Cow Mimosa = new Cow("Mimosa");
+    Cow mimosa = new Cow("Mimosa");
+    Radio continental = new Radio("Continental");
 
-    Animal[] animais = { olivia, buba, jujubinha, Mimosa };
+    Animal[] animaisQueComem = { olivia, buba, jujubinha, mimosa };
+    Talker[] falantes = { olivia, buba, jujubinha, mimosa, continental };
 
-    talker(animais);
-
-    eating(animais);
-  }
-
-  public static void talker(Animal[] animais) {
-    for (Animal animal : animais) { // aqui ele está percorrendo o array de animais
-      animal.talk();
-    }
-  }
-
-  public static void eating(Animal[] animais) {
-    for (Animal animal : animais) { // aqui ele está percorrendo o array de animais
+    for (Animal animal : animaisQueComem) {
       animal.eat();
     }
-    // if (animal instanceof Cat) {
-    // ((Cat) animal).eat();
-    // }
-    // for (int i = 0; i < animais.length; i++) {
-    // if (animais[i] instanceof Cat) {
-    // ((Cat) animais[i]).eat();
-    // }
 
-    // animais[i].talk();
+    for (Talker falante : falantes) {
+      falante.talk();
+    }
   }
 }

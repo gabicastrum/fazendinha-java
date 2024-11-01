@@ -1,8 +1,7 @@
-public abstract class Animal {
+public abstract class Animal implements Talker { //implementando a interface Talker
   protected String name;
 
   public Animal(String name) {
-    super();
     this.name = name;
   }
 
@@ -10,15 +9,9 @@ public abstract class Animal {
     this("Anônimo");
   }
 
-  public abstract void talk();
-  
   public abstract void eat();
 
   public String getName() {
     return name;
   }
-
-//   public void talk() {
-//     System.out.printf("%s diz ...%n", this.name);
-//   }
 }
